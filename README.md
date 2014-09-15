@@ -20,7 +20,7 @@ The code assumes that the following files provided with the assignment are avail
 ******************************************************************************
 ###Main steps in run_analysis.R script:
 
-#### Step1: Merging the training and test sets to create one data set.
+##### Step1: Merging the training and test sets to create one data set.
     1. Vertically merge X, y and subject files of training data sets using *cbind*
     2. Vertcially merge X, y and subject files of test data sets using *cbind*
     3. Assign variables names to the above datasets using the names available in the Features.txt file. 
@@ -28,24 +28,24 @@ The code assumes that the following files provided with the assignment are avail
     5. Horizontally merge datasets from above using *rbind*.
     6. The dataset at the end of Step1 will contain 10297 rows and 563 columns
 
-#### Step2: Extract measurements on the mean and standard deviation.
+##### Step2: Extract measurements on the mean and standard deviation.
     1. Create two vectors that have feature names containing the strings "mean(" or "std(". using **grep** command. 
         Note: Intermediate mean variables (e.g: gravityMean) used in angle variables have been excluded.
     2. Use these vectors to create a subset of data from Step1.
     3. The variables SubjectId and Activity Class should continue to be retained in addition to the mean and std variables.
-    4.. The dataset at the end of Step2 will contain 10297 rows and 68 columns
+    4. The dataset at the end of Step2 will contain 10297 rows and 68 columns
    
-#### Step3: Uses descriptive activity names to name the activities in the data set
+##### Step3: Uses descriptive activity names to name the activities in the data set
     1. Create a new vector (ActivityDescription) that "decodes" ActivityClass back to descriptive names given in the activity_labels.txt file.
     2. Replace variable ActivityClass with ActivityDescription
     3. The dataset at the end of Step3 will contain 10297 rows and 68 columns
 
-#### Step4: Appropriately labels the data set with descriptive variable names.
+##### Step4: Appropriately labels the data set with descriptive variable names.
 
 This step is contained in Step1(3,4). The variables have been named using the
 descriptive names given in the features.txt. Please refer to the files feature_info.txt for more information.
 
-#### Step5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
+##### Step5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
     1. Create a new tidy dataset using aggregate command to summarize all variables by SubjectId and ActivityDescription (a.k.a. group by columns)
     2. Assign back meaningful names to the group by columns
     3. Write out a new file (tidy_data.txt) of the final tidy data set.
