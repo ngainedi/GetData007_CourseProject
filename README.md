@@ -31,11 +31,12 @@ The code assumes that the following files provided with the assignment are avail
 #### Step2: Extract measurements on the mean and standard deviation.
     1. Create two vectors that have feature names containing the strings "mean(" or "std(". using **grep** command. 
         Note: Intermediate mean variables (e.g: gravityMean) used in angle variables have been excluded.
-    2. Create a subset of data from Step1d, using the vectors from Step 2a. The variables SubjectId and Activity Class should continue to be retained in addition to the mean and std variables.
-    3. The dataset at the end of Step2 will contain 10297 rows and 68 columns
+    2. Use these vectors to create a subset of data from Step1.
+    3. The variables SubjectId and Activity Class should continue to be retained in addition to the mean and std variables.
+    4.. The dataset at the end of Step2 will contain 10297 rows and 68 columns
    
 #### Step3: Uses descriptive activity names to name the activities in the data set
-    1. Create a new vector (ActivityDescription) hat "decodes" ActivityClass back to descriptive names given in the activity_labels.txt file
+    1. Create a new vector (ActivityDescription) that "decodes" ActivityClass back to descriptive names given in the activity_labels.txt file.
     2. Replace variable ActivityClass with ActivityDescription
     3. The dataset at the end of Step3 will contain 10297 rows and 68 columns
 
