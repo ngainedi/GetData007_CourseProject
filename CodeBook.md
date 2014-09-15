@@ -37,10 +37,10 @@ Please refer to README.md for detailed instructions for creating the summarized 
     * Walking_downstairs
     * Walking_upstairs		 
 
-All the remaining variables in this file are *numerical* values and been calculated as an average (summarized by subjectId and Activity) of the corresponding varaibles in 
+All the remaining variables in this file are *numerical* values and have been calculated as an average (summarized by subjectId and Activity) of the corresponding variables in 
 the original data set. The naming conventions of the variables are provided in the 'features_info.txt' file in the original data set. Some key variable naming conventions are:
 
-    * The first letter of varaible name indicates whether:
+    * The first letter of variable name indicates whether:
         * t - time domain signal
         * f - Fast Fourier Transformed signal
     * The ending of the variable (XYZ) indicates the direction in which the signal was measured.
