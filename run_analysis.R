@@ -11,7 +11,7 @@
 
 
 
-# Initialize path for the files
+# Initialize path for the files (they are assumed to be in the same dir)
 
 working_dir = getwd()
 
@@ -24,14 +24,14 @@ test_Y_file = paste(working_dir,'/Y_test.txt', sep='')
 test_sub_file = paste(working_dir,'/subject_test.txt', sep='')
 
 # 1A. Read X, y, subject training files into dataframes
-#    Combine X, y, subject data frame into a single file 
+#    Combine X, y, subject data frames into a single file 
 train_X_df = read.csv(training_X_file, sep = '', stringsAsFactors = FALSE)
 train_Y_df = read.csv(training_Y_file, sep = '', stringsAsFactors = FALSE)
 train_sub_df = read.csv(training_sub_file, sep = '', stringsAsFactors = FALSE)
 train_df = cbind(train_sub_df, train_Y_df, train_X_df)
 
 # 1B. Read X, y, subject test files into dataframes
-#    Combine X, y, subject data frame into a single file 
+#    Combine X, y, subject data frames into a single file 
 test_X_df = read.csv(test_X_file, sep = '', stringsAsFactors = FALSE)
 test_Y_df = read.csv(test_Y_file, sep = '', stringsAsFactors = FALSE)
 test_sub_df = read.csv(test_sub_file, sep = '', stringsAsFactors = FALSE)
@@ -79,11 +79,16 @@ working_df = cbind(reduced_df[1], ActivityDescription, reduced_df[3:68])
 
 ## 5. Create a tidy set that summarizes data from previous step by subject 
 ##    and activity
+##    Clean-up variable names to remove periods and use camel case for mean/std
 
 tidy_df = aggregate(working_df[,3:68], 
                     by=list(working_df$SubjectId, working_df$ActivityDescription), 
                     mean)
 names(tidy_df)[1] <- 'SubjectId' #Rename columns in the tidy dataset
 names(tidy_df)[2] <- 'Activity'  #Rename columns in the tidy dataset
+names(tidy_df) <- gsub('[\\.\\(\\)]','',names(tidy_df)) ##Remove periods, underscores and brackets
+names(tidy_df) <- gsub('-','',names(tidy_df))
+names(tidy_df) <- gsub('mean','Mean',names(tidy_df)) ##Replace mean with Mean
+names(tidy_df) <- gsub('std','Std',names(tidy_df)) ##Replace std with Std
 
 write.table(tidy_df, file = 'tidy_data.txt', row.names=FALSE)
