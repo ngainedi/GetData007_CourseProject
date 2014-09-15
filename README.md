@@ -13,15 +13,15 @@ Course Project for Getting and Cleaning Data.
 
 The code assumes that the following files provided with the assignment are available in the same working directory as the run_analysis.R script.
 
-   	* Training files - X_train.txt, y_train.txt, subject_train.txt
-   	* Test files - X_test.txt, y_test.txt, subject_test.txt
-   	* Features - features.txt (contains names of feature variables)
+   	1. Training files - X_train.txt, y_train.txt, subject_train.txt
+   	2. Test files - X_test.txt, y_test.txt, subject_test.txt
+   	3. Features - features.txt (contains names of feature variables)
 
 ******************************************************************************
 ###Main steps in run_analysis.R script:
 
 #### Step1: Merging the training and test sets to create one data set.
-    * Vertically merge X, y and subject files of training data sets using __cbind__
+    1. Vertically merge X, y and subject files of training data sets using __cbind__
     * Vertcially merge X, y and subject files of test data sets using **cbind**
     * Assign variables names to the above datasets using the names available in the Features.txt file. 
     * The variable from the Subject file and the y file are named  SubjectId and ActivityClass respectively.
