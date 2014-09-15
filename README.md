@@ -50,7 +50,7 @@ descriptive names given in the features.txt. Please refer to the files feature_i
     2. Assign back meaningful names to the group by columns
     3. Write out a new file (tidy_data.txt) of the final tidy data set.
     4. The dataset at the end of Step3 will contain 180 rows (30 subject * 6 activities) and 68 columns.
-    5. Please use the following code from the dsicussion forum to view the dataset (https://class.coursera.org/getdata-007/forum/thread?thread_id=49) 
+    5. Please use the following code from the dsicussion forum to view the dataset ([https://class.coursera.org/getdata-007/forum/thread?thread_id=49]) 
         df <- read.table('tidy_data.txt', header=TRUE)
         View(df)
     
