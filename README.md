@@ -3,6 +3,7 @@ GetData007_CourseProject
 
 This repository contains 3 files that need to be submitted as part of the 
 Course Project for Getting and Cleaning Data.
+
     1. README.md - Contains explanation of the code in run_analysis.R
     2. run_analysis.R - R code that meets the specifications of the project
     3. Codebook.txt - Description of the variables in the final tidy data set
