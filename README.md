@@ -12,6 +12,7 @@ Course Project for Getting and Cleaning Data.
 ###Pre-requsites for running run_analysis.R:
 
 The code assumes that the following files provided with the assignment are available in the same working directory as the run_analysis.R script.
+
    	* Training files - X_train.txt, y_train.txt, subject_train.txt
    	* Test files - X_test.txt, y_test.txt, subject_test.txt
    	* Features - features.txt (contains names of feature variables)
