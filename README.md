@@ -22,7 +22,7 @@ The code assumes that the following files provided with the assignment are avail
 
 ##### Step1: Merging the training and test sets to create one data set.
     1. Vertically merge X, y and subject files of training data sets using "cbind"
-    2. Vertcially merge X, y and subject files of test data sets using "cbind"
+    2. Vertically merge X, y and subject files of test data sets using "cbind"
     3. Assign variables names to the above datasets using the names available in the Features.txt file. 
     4. The variable from the Subject file and the y file are named  SubjectId and ActivityClass respectively.
     5. Horizontally merge datasets from above using "rbind".
