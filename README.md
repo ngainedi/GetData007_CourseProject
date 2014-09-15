@@ -11,20 +11,19 @@ Course Project for Getting and Cleaning Data.
 Prerequsites for running run_analysis.R:
 1. The code assumes that the following Samsung files are available in the 
    same working directory as the run_analysis.R script.
-   	a. Training files - X_train.txt, y_train.txt, subject_train.txt
-   	b. Test files - X_test.txt, y_test.txt, subject_test.txt
-   	c. Features - features.txt (contains names of feature variables)
+   	* Training files - X_train.txt, y_train.txt, subject_train.txt
+   	* Test files - X_test.txt, y_test.txt, subject_test.txt
+   	* Features - features.txt (contains names of feature variables)
 
 ******************************************************************************
 Step1: Merging the training and the test sets to create one data set.
-A. Vertically merge X, y and subject files of training data sets using cbind
-B. Vertcially merge X, y and subject files of test data sets using cbind
-C. Assign variables names to the above datasets using the names available in 
-   the Features.txt file.
-   Variable from Subject file is named as SubjectId
-   Variable from y file is names as ActivityClass
-D. Horizontally merge datasets from above using rbind.
-   Note: The dataset at the end of Step1 will contain 10297 rows and 563 columns
+    * Vertically merge X, y and subject files of training data sets using cbind
+    * Vertcially merge X, y and subject files of test data sets using cbind
+    * Assign variables names to the above datasets using the names available in the Features.txt file.
+        * Variable from Subject file is named as SubjectId
+        * Variable from y file is names as ActivityClass
+    * Horizontally merge datasets from above using rbind.
+    * The dataset at the end of Step1 will contain 10297 rows and 563 columns
 
 Step2: Extracts only the measurements on the mean and standard deviation for 
 	each measurement. 
