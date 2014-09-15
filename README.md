@@ -21,14 +21,16 @@ The code assumes that the following files provided with the assignment are avail
 ###Main steps in run_analysis.R script:
 
 #### Step1: Merging the training and test sets to create one data set.
-    * Vertically merge X, y and subject files of training data sets using cbind
-    * Vertcially merge X, y and subject files of test data sets using cbind
-    * Assign variables names to the above datasets using the names available in the Features.txt file. The variable from the Subject file and the y file are named  SubjectId and ActivityClass respectively.
-    * Horizontally merge datasets from above using rbind.
+    * Vertically merge X, y and subject files of training data sets using *cbind*
+    * Vertcially merge X, y and subject files of test data sets using *cbind*
+    * Assign variables names to the above datasets using the names available in the Features.txt file. 
+    * The variable from the Subject file and the y file are named  SubjectId and ActivityClass respectively.
+    * Horizontally merge datasets from above using *rbind*.
     * The dataset at the end of Step1 will contain 10297 rows and 563 columns
 
 #### Step2: Extract measurements on the mean and standard deviation.
-    * Create two vectors that have feature names containing the strings "mean(" or "std(". This is done using grep command. Note: Intermediate mean variables (e.g: gravityMean) used in angle variables have been excluded.
+    * Create two vectors that have feature names containing the strings "mean(" or "std(". using *grep* command. 
+        Note: Intermediate mean variables (e.g: gravityMean) used in angle variables have been excluded.
     * Create a subset of data from Step1d, using the vectors from Step 2a. The variables SubjectId and Activity Class should continue to be retained in addition to the mean and std variables.
     * The dataset at the end of Step2 will contain 10297 rows and 68 columns
    
