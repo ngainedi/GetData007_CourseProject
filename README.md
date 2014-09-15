@@ -21,7 +21,7 @@ The code assumes that the following files provided with the assignment are avail
 ###Main steps in run_analysis.R script:
 
 #### Step1: Merging the training and test sets to create one data set.
-    * Vertically merge X, y and subject files of training data sets using **cbind**
+    * Vertically merge X, y and subject files of training data sets using __cbind__
     * Vertcially merge X, y and subject files of test data sets using **cbind**
     * Assign variables names to the above datasets using the names available in the Features.txt file. 
     * The variable from the Subject file and the y file are named  SubjectId and ActivityClass respectively.
