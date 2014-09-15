@@ -12,12 +12,14 @@ The original dataset has been collected from the accelerometers from the Samsung
 The data set contains different variables characterizing the movement of users while performing various activities. A detailed explanation of the variables is available in the files features.txt and features_info.txt that ship with the data set.
 
 This particular tidy data set has been summarized at the following levels and contains 180 observations:
+
     1. For every subject (total of 30 distinct subjects)
     2. For every activity type (total of 6 distinct activity types)
 
 A design choice has been made to represent the various averages (mean variables) as columns.
 
 The final data set follows the following commonly observed rules of tidy sets:
+
     1. There is only one dataset (summarized by subject/activity).
     2. Each variable is in its own column.
     3. Each row represents the summary of only 1 subject and 1 activity.
@@ -36,14 +38,15 @@ Please refer to README.md for detailed instructions for creating the summarized 
     * Walking_upstairs		 
 
 All the remaining variables in this file are *numerical* values and been calculated as an average (summarized by subjectId and Activity) of the corresponding varaibles in 
-the original data set. The naming conventions of the variables are provided in the 'features_info.txt' file in the original data set. Some key naming conventions are:
-	* The first letter of varaible name indicates whether:
-		* t - time domain signal
-		* f - Fast Fourier Transformed signal
-	* The ending of the variable (XYZ) indicates the direction in which the signal was measured.
-	* Acc or Gyro represents whether signal was captured from accelerometer or the gyroscope
-	* Body or Gravity represents whether the signal was separated for the body or Gravity
-	* Mean or Std indicates if the variable was calculated as an average or the standard deviation of the raw signals
+the original data set. The naming conventions of the variables are provided in the 'features_info.txt' file in the original data set. Some key variable naming conventions are:
+
+    * The first letter of varaible name indicates whether:
+        * t - time domain signal
+        * f - Fast Fourier Transformed signal
+    * The ending of the variable (XYZ) indicates the direction in which the signal was measured.
+    * Acc or Gyro represents whether signal was captured from accelerometer or the gyroscope
+    * Body or Gravity represents whether the signal was separated for the body or Gravity
+    * Mean or Std indicates if the variable was calculated as an average or the standard deviation of the raw signals
 	
 
 3. tBodyAccMeanX
